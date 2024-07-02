@@ -4,6 +4,7 @@ codes.forEach((code,index)=>{
     code.addEventListener("keydown",(e)=>{
         const keyPressed = e.key
         if(keyPressed>=0 && keyPressed<=9){
+			codes[index].value='';
             if(index<codes.length-1){
                 setTimeout(()=>codes[index+1].focus(),1);
             }
