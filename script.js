@@ -1,22 +1,22 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-const codes = Array.from(document.querySelectorAll('.code'));
-	codes.forEach((code,index)=>{				
-	    code.addEventListener("keydown",(e)=>{
-	        const keyPressed = e.key
-			if(keyPressed>=0 && keyPressed<=9){
-            codes[index].value=''
-            if(index<codes.length-1){
-                setTimeout(()=>codes[index+1].focus(),10)
+const codes = document.querySelectorAll(".code")
+ 
+codes[0].focus()
+ 
+codes.forEach((code,idx)=>{
+    code.addEventListener("keydown",(e)=>{
+        console.log(e.key)
+        const keyPressed = e.key
+ 
+        if(keyPressed>=0 && keyPressed<=9){
+            codes[idx].value=''
+            if(idx<codes.length-1){
+                setTimeout(()=>codes[idx+1].focus(),10)
             }
-	        }
-	         if(keyPressed==="Backspace"){
-	            if(index>0){
-	                setTimeout(()=>codes[index-1].focus(),10)
-	            }
-	        }
-	    })
-	})
-	if(codes.leength>0){
-		codes[0].focus();
-	}
-});
+        }
+        else if(keyPressed==="Backspace"){
+            if(idx>0){
+                setTimeout(()=>codes[idx-1].focus(),10)
+            }
+        }
+    })
+})
