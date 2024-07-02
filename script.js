@@ -11,7 +11,7 @@ const codes = Array.from(document.querySelectorAll('.code'));
 	        }
 	         if(keyPressed==="Backspace"){
 	            if(index>0){
-	                codes[index-1].focus();
+	                setTimeout(()=>codes[index-1].focus(),10)
 	            }
 	        }
 	    })
