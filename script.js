@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 const codes = Array.from(document.querySelectorAll('.code'));
 	codes.forEach((code,index)=>{
-		 code.addEventListener('input', () => {
+		 
+		code.addEventListener("input", () => {
 	        if (code.value.length>0) {
 	          if (index<codes.length-1) {
 	            codes[index+1].focus();
