@@ -1,4 +1,4 @@
-const codes = document.querySelectorAll(".code")
+const codes = Array.from(document.querySelectorAll('.code'));
 codes.forEach((code,index)=>{
     code.addEventListener("keydown",(e)=>{
         const keyPressed = e.key
