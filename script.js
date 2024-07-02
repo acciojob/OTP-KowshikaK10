@@ -1,5 +1,5 @@
 const codes = document.querySelectorAll(".code")
-
+codes[0].focus();
 codes.forEach((code,index)=>{
     code.addEventListener("keydown",(e)=>{
         const keyPressed = e.key
