@@ -18,4 +18,7 @@ const codes = Array.from(document.querySelectorAll('.code'));
 	        }
 	    })
 	})
+	if(codes.leength>0){
+		codes[0].focus();
+	}
 });
