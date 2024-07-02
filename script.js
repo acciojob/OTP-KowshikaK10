@@ -1,1 +1,17 @@
-//your JS code here. If required.
+const codes = document.querySelectorAll(".code")
+
+codes.forEach((code,index)=>{
+    code.addEventListener("keydown",(e)=>{
+        const keyPressed = e.key
+        if(keyPressed>=0 && keyPressed<=9){
+            if(index<codes.length-1){
+                setTimeout(()=>codes[index+1].focus(),1);
+            }
+        }
+        else if(keyPressed==="Backspace"){
+            if(index>0){
+                setTimeout(()=>codes[index-1].focus(),1)
+            }
+        }
+    })
+})
