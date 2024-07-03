@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", () => {
     let codes = document.querySelectorAll(".code");
     codes[0].focus();
 
@@ -15,3 +15,4 @@
             }
         });
     });
+});
